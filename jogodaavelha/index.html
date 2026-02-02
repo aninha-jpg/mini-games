@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imagens/favicon-16x16.png" type="image/x-icon">
+    <title>Jogo da Velha</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Jogo da Velha</h1>
+    </header>
+    <main class="tabuleiro" onclick="jogadorDaVez(event)">
+        <div class="xoro"></div>
+        <div class="xoro"></div>
+        <div class="xoro"></div>
+        <div class="xoro"></div>
+        <div class="xoro"></div>
+        <div class="xoro"></div>
+        <div class="xoro"></div>
+        <div class="xoro"></div>
+        <div class="xoro"></div>
+    </main>
+    <section>
+            <p class="jogadorDaVez">Vez do Jogador: X</p>
+            <button type="submit" value="Reiniciar" onclick="reiniciar()">Reiniciar Game</button>
+        </section>
+    <footer>
+        <p>Criado por Ana Luiza.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
