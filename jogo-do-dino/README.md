@@ -3,7 +3,6 @@
 ## Objetivo
  - Reforçar a Lógica de Programação por meio de jogo interativo inspirado no famoso dinossauro do navegador.
 
----
 
 ## 💻 Como Jogar
 
@@ -13,20 +12,17 @@
 
 3. Aperte qualquer tecla do seu **teclado** para fazer o dino pular e desviar do obstáculo.
 
----
 
 ## 🎨 Artes
 
 Todas as pixel arts do jogo foram criadas por mim.
 
----
 
 ## Tecnologias
     - HTML5
     - CSS3
     - JavaScript.
 
----
 
 ## Possíveis Adições Futuras
     - Animações diferentes para o dinossauro e o fundo.
@@ -34,7 +30,6 @@ Todas as pixel arts do jogo foram criadas por mim.
     - Velocidade Progressiva.
     - Sistema de Vida.
 
----
 
 ## Referência de Estudo 
 
