@@ -1,12 +1,12 @@
 # 🦖 Jogo do Dino
 
 ## 📍 Objetivo
- - Reforçar a Lógica de Programação por meio de jogo interativo inspirado no famoso dinossauro do navegador.
 
+ - Reforçar a Lógica de Programação por meio de jogo interativo inspirado no famoso dinossauro do navegador.
 
 ## 💻 Como Jogar
 
-1. **Baixe ou Clone o repositório do GitHub** no seu computador
+1. **Baixe ou Clone o repositório do GitHub** no seu computador.
 
 2. Abra o arquivo **index.html** no seu navegador.
 
