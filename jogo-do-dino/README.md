@@ -1,12 +1,6 @@
 # 🦖 Jogo do Dino
 
-<<<<<<< HEAD
 ## 🧩 Objetivo
- - Reforçar a Lógica de Programação por meio de jogo interativo inspirado no famoso dinossauro do navegador.
-=======
-## 📍 Objetivo
->>>>>>> f72fca9b18d4fe753641bf9911beda4a2219c672
-
  - Reforçar a Lógica de Programação por meio de jogo interativo inspirado no famoso dinossauro do navegador.
 
 ## 💻 Como Jogar
