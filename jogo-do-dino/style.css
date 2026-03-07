@@ -1,5 +1,20 @@
+:root {
+    --cor1: #1e202c;
+    --cor2: #31323e;
+    --cor3: #60519b;
+    --cor4: #bfc0d1;
+}
+
+/* impede que usuarios selecionem elementos sem quere */
+#dino, #box, #score, body {
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+}
+
 body {
-    background-color: #1D1B2A;
+    background-color: var(--cor1);
     color: white;
     margin: 0 auto;
 }
@@ -11,10 +26,12 @@ body {
 #game {
     width: 600px;
     height: 300px;
-    border: 1px solid rgba(0, 0, 0, 0.258);
+    border: 1px solid var(--cor3);
     margin: auto;
     background-image: url(image/fundo.png);
     background-size: cover;
+    overflow: hidden;
+    position: relative;
 }
 
 #dino {
@@ -34,6 +51,9 @@ body {
     left: 550px;
     background-image: url(image/box.png);
     background-size: cover;
+}
+
+.box-animation {
     animation: caixa 1.33s infinite;
 }
 
@@ -51,4 +71,52 @@ body {
     50%{top: 75px;}
     75%{top: 75px;}
     100%{top: 225px;}
+}
+
+a {
+    text-decoration: none;
+    color: var(--cor4);
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: var(--cor2);
+}
+
+button {
+    margin: 10px;
+    background-color: var(--cor2);
+    color: var(--cor4);
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 1em;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: var(--cor3);
+    color: var(--cor4);
+}
+
+#inicio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 600px) {
+    @media (max-width: 600px) {
+    #game, #score, #inicio {
+        zoom: 0.64;
+        margin-top: 50px;
+    }
+    button {
+        padding: 15px;
+        width: 200px;
+    }
+}
 }

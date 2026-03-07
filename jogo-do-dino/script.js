@@ -2,7 +2,33 @@ const dino = window.document.getElementById("dino");
 const box = window.document.getElementById("box");
 const score = window.document.getElementById("score");
 
+let cronometro;
+let motorJogo;
+
 // fazendo funcão para chamar a class jump animation da css e remover logo em seguida
+
+function iniciar() {
+
+    clearInterval(motorJogo);
+    clearInterval(cronometro);
+    // tira o foto do botão iniciar
+    if(document.activeElement){
+        document.activeElement.blur();
+    }
+    // faz uma contagem 3,2,1 antes de iniciar o game
+    let temp = 3;
+    cronometro = setInterval(() => {
+        if (temp > 0){
+            score.innerText = temp;
+            temp--;
+        } else {
+            clearInterval(cronometro);
+            score.innerText = 0;
+            rodarJogo();
+        }
+    }, 1000)
+} 
+
 function jump(){
     dino.classList.add('jump-animation');
     setTimeout(() => {
@@ -16,46 +42,54 @@ document.addEventListener('keypress', () => {
     if(!dino.classList.contains('jump-animation')){
         jump();
     }
-}) 
+})
+
+document.addEventListener('mousedown', () => {
+    if(!dino.classList.contains('jump-animation')){
+        jump();
+    }
+})
+
+document.addEventListener('touchstart', (e) => {
+    if(e.touches.length === 1){
+        if(!dino.classList.contains('jump-animation')){
+            jump();
+        }
+    }
+}, {passive: false});
 
 // definindo o estilo computado(top e left) do dinossauro e da caixa para fazer o loop do game
 
 // só mostra a pedra se o valor for positivo.
+function rodarJogo(){
 
-setInterval(() => {
-    score.innerText++;
-    const dinoTop = parseInt(window.getComputedStyle(dino).getPropertyValue('top'));
+    clearInterval(motorJogo);
+    clearInterval(cronometro);
+    // liga a caixa
+    box.classList.add('box-animation');
 
-    const boxLeft = parseInt(window.getComputedStyle(box).getPropertyValue('left'));
+    motorJogo = setInterval(() => {
+        const dinoTop = parseInt(window.getComputedStyle(dino).getPropertyValue('top'));
 
-    if(boxLeft < 0) {
-        box.style.display = 'none';
-    } else {
-        box.style.display = "";
-    }
+        const boxLeft = parseInt(window.getComputedStyle(box).getPropertyValue('left'));
+        // agora o placar aumenta conforme você pula a caixa
+        if(boxLeft < 0) {
+            if (box.style.display !== 'none') {
+                score.innerText++;
+            }
+            box.style.display = "";
+        }
 
-    // detectando a colisão
+        // detectando a colisão
 
-    if (boxLeft < 50 && boxLeft > 0 && dinoTop > 150) {
-        alert('Fim de Jogo! Sua Pontuação é: ' +  score.innerText + "\n\nJogar Novamente?");
-        location.reload();
-    }
-
-}, 50);
-
-
-/*
-
-script feito antes do tutorial para melhorar lógica de programação.
+        if (boxLeft < 50 && boxLeft > 0 && dinoTop > 160) {
+            clearInterval(motorJogo);
+            alert("Aii, você bateu!")
+            score.innerHTML = 'Fim de Jogo! Sua Pontuação é: ' +  score.innerText;
+            // a animação inicia e finaliza conforme o jogo ocorre
+            box.classList.remove('box-animation')
+        }
 
 
-1 - APÓS PASSAR AS VARIÁVEIS, PRECISA TER A INTERAÇÃO DE PULAR - add event
-
-2 - SCORE PRECISAR ATUALIZAR(++) CONFORME ELE AVANÇA SEM MORRER(FUNÇÃO)
-3 - O JOGO PRECISA PARAR SE ELE BATER NA PEDRA
-
-4 - O JOGO RESETA O SCORE SE ELE BATER NA PEDRA
-
-5 - ELE DÁ UM ALERT PERGUNTANDO SE QUER JOGAR NOVAMENTE - SE SIM, COMEÇA DE NOVO
-
-*/
+    }, 50);
+}

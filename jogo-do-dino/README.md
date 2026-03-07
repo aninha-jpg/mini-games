@@ -1,6 +1,6 @@
 # 🦖 Jogo do Dino
 
-## Objetivo
+## 🧩 Objetivo
  - Reforçar a Lógica de Programação por meio de jogo interativo inspirado no famoso dinossauro do navegador.
 
 ---
@@ -15,27 +15,34 @@
 
 ---
 
+* **Ou entre em: 🔗** [aninha-jpg.github.io/portfolio](https://aninha-jpg.github.io/portfolio/)
+
+* Desça até a seção **projetos** e selecione **Jogue Agora!**
+
+**Agora ele está responsivo para celular!!!.**
+
+---
+
 ## 🎨 Artes
 
 Todas as pixel arts do jogo foram criadas por mim.
 
 ---
 
-## Tecnologias
+## ⚒️ Tecnologias
     - HTML5
     - CSS3
     - JavaScript.
 
 ---
 
-## Possíveis Adições Futuras
+## 💾 Possíveis Adições Futuras
     - Animações diferentes para o dinossauro e o fundo.
-    - Tela de Game Over (Botão para iniciar novamente).
     - Velocidade Progressiva.
     - Sistema de Vida.
 
 ---
 
-## Referência de Estudo 
+## 📚 Referência de Estudo 
 
 Projeto desenvolvido com base no tutorial do Canal <a href= "https://www.youtube.com/@KrisFoster1">Kris Foster</a> no youtube.
